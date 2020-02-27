@@ -1,0 +1,48 @@
+﻿<Window x:Class="BioAttendance.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BioAttendance"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontWeight="UltraBold"
+              Text="BIO ATTENDANCE REGISTER" FontSize="28" Margin="0,0,0,20" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" FontWeight="Bold"
+              Text="Register New Employee:" FontSize="24" Margin="0,0,0,20"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" FontWeight="Bold"
+              Text="Register New Department:" FontSize="24" Margin="0,0,0,20"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" FontWeight="Bold"
+              Text="Update Employee's Record:" FontSize="24" Margin="0,0,0,20"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" FontWeight="Bold"
+              Text="Update Department Record:" FontSize="24" Margin="0,0,0,20"/>
+
+        <Button x:Name="RegEmployee" Content="Register Employee" Grid.Column="2" Grid.Row="2" FontSize="20" FontWeight="Heavy" Margin="10" Click="RegEmployee_Click_1" />
+        <Button x:Name="RegDepartment" Content="Register Dept." Grid.Column="2" Grid.Row="3" FontSize="20" FontWeight="Heavy" Margin="10" />
+        <Button x:Name="UpdateEmployee" Content="Update Employee" Grid.Column="2" Grid.Row="4" FontSize="20" FontWeight="Heavy" Margin="10" Click="UpdateEmployee_Click"/>
+        <Button x:Name="UpdateDepartment" Content="Update Dept." Grid.Column="2" Grid.Row="5" FontSize="20" FontWeight="Heavy" Margin="10" Click="UpdateDepartment_Click"/>
+        <Button x:Name="AdminLogin" Content="Admin Login" Grid.Column="1" Grid.Row="6" FontSize="20" FontWeight="Heavy" Margin="20" Grid.ColumnSpan="3" Click="AdminLogin_Click"/>
+    </Grid>
+</Window>
